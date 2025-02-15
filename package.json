@@ -15,6 +15,6 @@
   }
 
    "engines": {
-  "node": "22.x"  // or the version you are using
+  "node": "22.x" 
 }
 }
