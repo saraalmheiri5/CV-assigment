@@ -13,4 +13,8 @@
   "dependencies": {
     "express": "^4.21.2"
   }
+
+   "engines": {
+  "node": "22.x"  // or the version you are using
+}
 }
