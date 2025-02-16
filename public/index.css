@@ -1,47 +1,143 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.resume {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    margin: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    margin: 1in;
+    line-height: 1.15;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+h1 + p {
+    text-align: center;
+    font-size: 12pt;
+}
+
+hr.thin-line {
+    border: 0.5px solid black;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 14pt;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-top: 15px;
-    color: #333;
+    margin-bottom: 5px;
 }
 
-p, ul {
-    font-size: 14px;
-    color: #555;
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 3px;
 }
 
 ul {
     padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
-a {
-    color: #007BFF;
+li {
+    margin-bottom: 3px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
     text-decoration: none;
+    color: blue;
+}
+
+.section-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+}
+
+.project-title, .job-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.edu-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.date-right {
+    text-align: right;
+    font-weight: bold;
+}
+
+#center{
+    text-align: center;
+}
+hr.thick {
+    border: none;
+    border-top: 5px dotted #000; /* Thick dotted line */
+    margin: 20px 0; /* Spacing around the line */
+}
+
+
+/* Print-Specific Styles */
+@media print {
+    body {
+        margin: 0.5in;
+        font-size: 11pt;
+    }
+
+    /* Hide the button when printing */
+    .print-btn {
+        display: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Ensure sections don't break awkwardly */
+    section {
+        page-break-inside: avoid;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /* Adjust header formatting */
+    h1, h2, h3 {
+        font-weight: bold;
+    }
+
+    /* Ensure lists are properly formatted */
+    ul {
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+
+    hr.thin-line {
+        border: 0.5px solid black;
+    }
+
+    hr.thick {
+        border: none;
+        border-top: 5px dotted #000; /* Thick dotted line */
+        margin: 20px 0; /* Spacing around the line */
+    }
 }
